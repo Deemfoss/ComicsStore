@@ -1,0 +1,128 @@
+.pagination { display: inline-block; padding-left: 0; margin: 20px 0; border-radius: 4px; }
+
+    .pagination > li { display: inline; }
+
+        .pagination > li > a,
+        .pagination > li > span { position: relative; float: left; padding: 6px 12px; margin-left: -1px; line-height: 1.428571429; text-decoration: none; background-color: #ffffff; border: 1px solid #dddddd; }
+
+        .pagination > li:first-child > a,
+        .pagination > li:first-child > span { margin-left: 0; border-bottom-left-radius: 4px; border-top-left-radius: 4px; }
+
+        .pagination > li:last-child > a,
+        .pagination > li:last-child > span { border-top-right-radius: 4px; border-bottom-right-radius: 4px; }
+
+        .pagination > li > a:hover,
+        .pagination > li > span:hover,
+        .pagination > li > a:focus,
+        .pagination > li > span:focus { background-color: #eeeeee; }
+
+    .pagination > .active > a,
+    .pagination > .active > span,
+    .pagination > .active > a:hover,
+    .pagination > .active > span:hover,
+    .pagination > .active > a:focus,
+    .pagination > .active > span:focus { z-index: 2; color: #ffffff; cursor: default; background-color: #428bca; border-color: #428bca; }
+
+    .pagination > .disabled > span,
+    .pagination > .disabled > a,
+    .pagination > .disabled > a:hover,
+    .pagination > .disabled > a:focus { color: #999999; cursor: not-allowed; background-color: #ffffff; border-color: #dddddd; }
+
+.pagination-lg > li > a,
+.pagination-lg > li > span { padding: 10px 16px; font-size: 18px; }
+
+.pagination-lg > li:first-child > a,
+.pagination-lg > li:first-child > span { border-bottom-left-radius: 6px; border-top-left-radius: 6px; }
+
+.pagination-lg > li:last-child > a,
+.pagination-lg > li:last-child > span { border-top-right-radius: 6px; border-bottom-right-radius: 6px; }
+
+.pagination-sm > li > a,
+.pagination-sm > li > span { padding: 5px 10px; font-size: 12px; }
+
+.pagination-sm > li:first-child > a,
+.pagination-sm > li:first-child > span { border-bottom-left-radius: 3px; border-top-left-radius: 3px; }
+
+.pagination-sm > li:last-child > a,
+.pagination-sm > li:last-child > span { border-top-right-radius: 3px; border-bottom-right-radius: 3px; }
+
+.pager { padding-left: 0; margin: 20px 0; text-align: center; list-style: none; }
+
+    .pager:before,
+    .pager:after { display: table; content: " "; }
+
+    .pager:after { clear: both; }
+
+    .pager:before,
+    .pager:after { display: table; content: " "; }
+
+    .pager:after { clear: both; }
+
+    .pager li { display: inline; }
+
+        .pager li > a,
+        .pager li > span { display: inline-block; padding: 5px 14px; background-color: #ffffff; border: 1px solid #dddddd; border-radius: 15px; }
+
+            .pager li > a:hover,
+            .pager li > a:focus { text-decoration: none; background-color: #eeeeee; }
+
+    .pager .next > a,
+    .pager .next > span { float: right; }
+
+    .pager .previous > a,
+    .pager .previous > span { float: left; }
+
+    .pager .disabled > a,
+    .pager .disabled > a:hover,
+    .pager .disabled > a:focus,
+    .pager .disabled > span { color: #999999; cursor: not-allowed; background-color: #ffffff; }
+
+.cat-list { flex: 0 0 300px; }
+
+.prod-list { flex: 1 1 auto; }
+
+.index-page { display: flex; }
+.prod-item { display: inline-block; flex-wrap: wrap; max-width: 250px; }
+
+.main-page { display: flex; flex-direction: column; }
+.header-content { flex: 0 0 auto; }
+.name-store { flex: 0 0 auto; align-items: flex-start; justify-content: flex-start; }
+.shopping-cart { flex: 0 0 auto; align-items: flex-end; justify-content: flex-end; display:flex; }
+.pages-name { border-bottom: groove; border-top: groove; border-color: lightgray; border-width: thin; flex: 1 1 auto; }
+.spec-item { display: flex; flex-direction: column; max-width:300px; }
+.item-name { flex: 1 1 auto; }
+
+.item-img { flex: 1 1 auto; }
+
+.prod-info {
+    flex: 1 1 auto;
+    padding-left: 5px;
+}
+
+.prod-dscrpt { display: flex; }
+
+.search-header { width: 270px; font-size: 18px }
+
+.main-class { width: 90%; height: 90%; }
+
+.sort-class{
+    flex:  0 0 auto;
+    width:100%;
+}
+.map-size{
+    width:800px;
+    height:500px;
+}
+
+.lng-group{
+    display:flex;
+}
+
+@media (max-width: 1024px) {
+    .index-page { display: flex; flex-direction: column; }
+    .search-header{margin-top:5px;}
+    .prod-item { max-width: 100%; }
+    .cat-list { flex: 0 1 300px; }
+    .main-class { width: 100%; height: 100%; }
+    .map-size{width:100%; min-width:350px; max-height:350px;}
+}

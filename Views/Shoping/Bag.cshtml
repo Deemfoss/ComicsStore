@@ -1,0 +1,48 @@
+﻿@using ComicsStores.Models;
+<h2>Корзина покупок</h2>
+
+<table class="table table-hover BagSize" >
+ 
+    <tr>
+        <th><p>Название</p></th>
+        <th>Количество</th>
+        <th>Цена</th>
+        <th>Сумма</th>
+        <th>Убрать из корзины</th>
+
+    </tr>
+   
+    @foreach (var item in (List<ShopingCart>)Session["cart"])
+    {
+      
+        <tr>
+            <td><p><b>@item.product.Name</b></p>
+            <img src="@item.product.Url" height="150px"/> 
+            </td>
+       <td>@item.quantity.ToString()</td>
+        <td>@item.product.Price</td> 
+       <td>@(Convert.ToDouble(item.product.Price) * Convert.ToDouble(item.quantity))</td>
+            <td>@Html.ActionLink("Убрать из корзины","Delete","Shoping",new {id=item.product.Id},null)</td>
+         </tr>
+
+         }
+
+
+</table>
+<div class="row">
+
+    <div class="col-lg-2"><a href="/Home/Index" class="btn btn-default">Продолжить покупки</a></div>
+    <div class="col-lg-2"><a href="/Shoping/Order/" class="btn btn-default">Оформить заказ</a></div>
+    <div class="col-lg-4"><p style="font-size:20pt">Цена к оплате: <b>@ViewBag.Sum </b></p></div>
+</div>
+@*<div>
+    <p> @item.product.Name</p>
+    <img src="@item.product.Url" height="150px"/>
+    <p>@item.product.Price</p>
+    <p>@item.quantity</p>
+    </div>*@
+
+
+
+
+

@@ -1,0 +1,38 @@
+﻿@model ComicsStores.Models.Purchas
+
+@using (Html.BeginForm("Order", "Shoping"))
+{
+   <p><h3>Оформление заказа</h3></p>
+   <br />
+        @Html.ValidationMessageFor(model => model.NameUser, "", new { @class = "text-danger" });
+       <div><input type="text" name="NameUser" class="form-control" placeholder="Имя" /></div>
+         <br />
+
+        @Html.ValidationMessageFor(model => model.Mail, "", new { @class = "text-danger" });
+        <div><input type="text" name="Mail" class="form-control" placeholder="Почта"/></div>
+
+        <br />
+
+
+        @Html.ValidationMessageFor(model => model.Adress, "", new { @class = "text-danger" });
+        <div><input type="text" name="Adress" class="form-control" placeholder="Адресс" /></div>
+
+        <br />
+        @Html.ValidationMessageFor(model => model.PhoneNumber, "", new { @class = "text-danger" });
+    <div><input type="text" name="PhoneNumber" class="form-control" placeholder="Телефон для связи" /></div>
+
+        <br />
+        <div>
+            @Html.Label("Тип доставки");
+            <select class="form-control" name="Delivery">
+                <option>Самовывоз</option>
+                <option>Почта</option>
+                <option>Курьер</option>
+            </select>
+        </div>
+
+        <br />
+        <input type="submit" value="Отпраить" class="btn btn-success" />
+
+}
+

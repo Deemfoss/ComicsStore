@@ -1,0 +1,41 @@
+﻿
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
+<div class="index-page">
+    <div class="cat-list">
+        @Html.Action("Categoryes");
+    </div>
+
+    <div class="prod-list">
+        @foreach (var item in ViewBag.CategoryDet)
+        {
+            <div class="prod-item">
+                <div class="well spec-item">
+                    <div class="item-name"><p class="NameFont"><b> @item.Name</b> </p></div>
+
+                    <div class="prod-dscrpt">
+                        <div class="item-img">
+                            <img class="img-rounded" src="@item.Url" height="190px" width="130px" />
+                            <p class="PriceFont"><b>Цена: @item.Price руб</b></p>
+                        </div>
+                        <div class=" prod-info AllProducts">
+                            <p>Издательство: @item.Brand</p>
+                            <p>Дата Выхода: @item.Date.Year</p>
+                            <p> @Html.ActionLink("Подробнее", "Description", new { id = item.Id })</p>
+                            <p>@Html.ActionLink("В корзину", "ShopingCart", "Shoping", new { id = item.Id }, null)</p>
+                            <input type="hidden" value="@item.Id" name="id" />
+                            <form action="" method="post">
+                                <div><a href="/Shoping/OrderFast/@item.Id" class="btn btn-success">Купить</a></div>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        }
+
+    </div>
+</div>
+@{
+    Layout = "~/Views/Shared/_LayoutForIndex.cshtml";
+}
+

@@ -1,0 +1,14 @@
+﻿@model IEnumerable<ComicsStores.Models.Category>
+
+<div>
+    @foreach (var item in Model)
+    {
+        <ul class="nav nav-tabs">
+            <li> <p><h3>@Html.ActionLink(item.Name, "CtegoryDet", new { id = item.Id }, new { @style = "color:black;" })</h3></p></li>
+        </ul>
+    }
+
+</div>
+@{
+    Layout = "~/Views/Shared/_LayoutCat.cshtml";
+}

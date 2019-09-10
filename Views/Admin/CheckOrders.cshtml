@@ -1,0 +1,77 @@
+﻿@model IEnumerable<ComicsStores.Models.Purchas>
+
+<h2>Заказы</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayName("Номер книги")
+        </th>
+        <th>
+            @Html.DisplayName("Дата заказа")
+        </th>
+        
+        <th>
+            @Html.DisplayName("Имя Заказачика")
+        </th>
+        <th>
+            @Html.DisplayName("Почта")
+        </th>
+        <th>
+            @Html.DisplayName("Тип доставки")
+        </th>
+        <th>
+            @Html.DisplayName("Адрес")
+        </th>
+        <th>
+            @Html.DisplayName("Номер телефона")
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model)
+{
+       <tr>
+
+        <td>
+            @Html.DisplayFor(modelItem => item.IdProducts)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Data)
+        </td>
+      
+        <td>
+            @Html.DisplayFor(modelItem => item.NameUser)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Mail)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Delivery)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Adress)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PhoneNumber)
+        </td>
+
+        <td>
+            @using (Html.BeginForm("Delete", "Admin"))
+            {
+                <input type="hidden" value="@item.Id" name="id" />
+                <input type="submit" value="Удалить" class="btn btn-danger" />
+
+            }
+          
+        
+           
+</td>
+                  
+    </tr>
+
+    
+}
+</table>
+    

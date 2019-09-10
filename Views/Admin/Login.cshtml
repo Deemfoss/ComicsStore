@@ -1,0 +1,33 @@
+﻿@model ComicsStores.Models.User
+
+<h2>Вход в панель администратора</h2>
+<div class="panel panel-default"  style="height:300px;width:440px">
+@using (Html.BeginForm("Login", "Admin"))
+{
+    <div class="row" style="padding-top:50px">
+       
+            @Html.AntiForgeryToken()
+            <br />
+
+            <div class="col-lg-3">
+                <div align="center" > <label style="font-size:15px">Логин:</label></div> <br />
+                <div align="center" style="padding-top:15px"> <label style="font-size:15px">Пароль:</label></div>
+                <br />
+            </div>
+            <div class="col-lg-6">
+                <div><input class="form-control" type="text" name="Login" /></div><br />
+                <div>  <input class="form-control" type="text" name="Password" /> </div>
+           
+        </div><br />
+            @*@Html.EditorForModel(Model.Password)<br />*@
+            @*//<input  type="file"/>*@
+          
+
+      
+    </div>
+    <div align="center" style="padding-top:30px">
+     
+        <input type="submit" class="btn btn-success" value="Выполнить вход" />
+    </div>
+}
+</div>

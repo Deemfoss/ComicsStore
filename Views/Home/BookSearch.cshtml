@@ -1,0 +1,40 @@
+﻿@model IEnumerable<ComicsStores.Models.Product>
+@using Resources;
+<div class="row">
+    <div class="col-md-3">
+        @Html.Action("Categoryes");
+    </div>
+    @using (Html.BeginForm("Order", "Shoping"))
+        <div class="col-md-9">
+            @foreach (var item in Model)
+            {
+                <div class="col-lg-4">
+                    <div class="well well-sm container indexCategory">
+                        <div><p class="NameFont"><b> @item.Name</b> </p></div>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <img class="img-rounded" src="@item.Url" height="190px" width="130px" />
+                                <p class="PriceFont"><b>@Resource.Price: @item.Price $</b></p>
+
+                            </div>
+                            <div class="col-lg-6 AllProducts">
+
+                                <p>@Resource.Publishment: @item.Brand</p>
+                                <p>@Resource.Releasedate: @item.Date.Year</p>
+                                <p> @Html.ActionLink(Resource.Detail, "Description", "Home", new { id = item.Id })</p>
+                                <p>@Html.ActionLink(Resource.AddToCart, "ShopingCart", "Shoping", new { id = item.Id }, null)</p>
+                                <input type="hidden" value="@item.Id" name="id" />
+                                <form action="" method="post">
+                                    <div class="col-lg-4"><a href="/Shoping/OrderFast/@item.Id" class="btn btn-success">@Resource.Buy</a></div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+
+        </div>
+    }
+</div>
+
+

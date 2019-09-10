@@ -1,0 +1,52 @@
+﻿@model PagedList.IPagedList<ComicsStores.Models.Product>
+
+@using PagedList.Mvc;
+@using Vereyon.Web;
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
+<div class="index-page">
+    <div class="cat-list">
+        @Html.Action("Categoryes")
+    </div>
+    @using (Html.BeginForm("Order", "Shoping"))
+    {
+<div class="prod-list">
+    <div class="sort-class">
+        @Html.RenderFlashMessages()
+        @Html.ActionLink(Resources.Resource.SortbyH, "SortbyPrice", "Home", "", new { sortOrder = ViewBag.PriceSortParm })
+        @Html.ActionLink(Resources.Resource.SorotbyL, "SortbydesPrice", "Home", "", new { sortOrder = ViewBag.PriceSortParm })
+    </div>
+    @foreach (var item in Model)
+    {
+        <div class="prod-item">
+            <div class="well spec-item">
+                <div class="item-name"><p class="NameFont"><b> @item.Name</b> </p></div>
+
+                <div class="prod-dscrpt">
+                    <div class="item-img">
+                        <img class="img-rounded" src="@item.Url" height="190px" width="130px" />
+                        <p class="PriceFont"><b>@Resources.Resource.Price: @item.Price $</b></p>
+                    </div>
+                    <div class="prod-info AllProducts">
+                        <div>@Resources.Resource.Publishment: @item.Brand</div>
+                        <div>@Resources.Resource.Releasedate: @item.Date.Year</div>
+                        <div> @Html.ActionLink(Resources.Resource.Detail, "Description", new { id = item.Id })</div>
+                        <div>@Html.ActionLink(Resources.Resource.AddToCart, "ShopingCart", "Shoping", new { id = item.Id }, null)</div>
+                        <input type="hidden" value="@item.Id" name="id" />
+                        <form action="" method="post">
+                            <div><a href="/Shoping/OrderFast/@item.Id" class="btn btn-success">@Resources.Resource.Buy</a></div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    }
+
+</div>
+    }
+</div>
+
+<div align="center"> @Html.PagedListPager(Model, page => Url.Action("Index", new { page }))</div>
+@{
+    Layout = "~/Views/Shared/_LayoutForIndex.cshtml";
+}

@@ -1,0 +1,36 @@
+﻿@using Resources;
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
+<h2 style="color:gray">@Resource.AboutUs</h2>
+<div>
+    <p>
+        <h4>
+            <b>«Comic Store»</b> — @Resource.DescriptonStore
+    </p>
+</div>
+<script src="~/Scripts/Map.js"></script>
+<h2 style="color:gray">@Resource.Ourlocation</h2>
+<br />
+<div id="map" class="map-size" border:groove"></div>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-V-yNn8Zo_Bc6N6Hq2Id8FTevxzenay0&callback=initMap">
+</script>
+<h2 style="color:gray">@Resource.ContactInf</h2>
+<br />
+<div class="row">
+    <div class="col-md-3"><p class="glyphicon glyphicon-map-marker AboutHSize"><b> @Resource.Address:</b></div>
+    <div class="col-md-9"><p class="AboutH2Size">@Resource.AddressF </div>
+
+</div>
+<div class="row">
+    <div class="col-md-3"><p class="glyphicon glyphicon-time AboutHSize"><b> @Resource.WorkTime:</b></div>
+    <div class="col-md-9"><p class="AboutH2Size">@Resource.WorkTimeF</div>
+</div>
+<div class="row">
+    <div class="col-md-3"><p class="glyphicon glyphicon-earphone"><b class="AboutH2Size"> @Resource.Telephone:</b></div>
+    <div class="col-md-9"><p class="AboutH2Size">+375(25)540-30-07</div>
+</div>
+<div class="row">
+    <div class="col-md-3"><p class="glyphicon glyphicon-envelope"><b class="AboutHSize"> @Resource.Mail:</b></div>
+    <div class="col-md-9"><p class="AboutH2Size"><a href="mailto:ArtsiomDusau@Gmail.com">ArtsiomDusau@Gmail.com</a> </div>
+</div>
+

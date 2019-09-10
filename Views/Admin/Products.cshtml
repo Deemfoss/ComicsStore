@@ -1,0 +1,37 @@
+﻿@model IEnumerable<ComicsStores.Models.Product>
+
+<h2>Товары</h2>
+<a href="/Admin/CreateProduct/"><h4>Добавить новый продукт</h4> </a>
+
+@*@using (Html.BeginForm("DeleteProduct","Admin",method:FormMethod.Post))
+{*@
+
+@foreach (var item in Model)
+{
+    <div class="well well-sm container" >
+ 
+            <div><b>Индефикатор продкта: </b> @item.Id</div>
+            <div><b>Название: </b>  @item.Name</div>
+            <div><b>Цена: </b> @item.Price</div>
+            <div>
+                <b>Cсылка на фотографию:</b> @item.Url 
+
+                <br />
+                <img src="@item.Url" height="100px" />
+            </div>
+
+            <div><b>Описание товара: </b> @item.Discription</div>
+            <div> <b>Дата выхода: </b> @item.Date</div>
+            <div><b>Компания: </b> @item.Brand</div>
+            <div><b>Категория товара: </b> @item.Category</div>
+    @using (Html.BeginForm("DeleteProduct", "Admin", method: FormMethod.Post))
+    {
+        <input type="hidden" value="@item.Id" name="id" />
+        <input  type="submit" value="Удалить" class="btn btn-danger"/>
+    }
+            @Html.ActionLink("Редактировать", "EditProduct", new { id = item.Id })
+        </div>
+
+}
+
+ @*}*@

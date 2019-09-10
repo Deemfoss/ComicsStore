@@ -1,0 +1,56 @@
+﻿@model IEnumerable<ComicsStores.Models.Product>
+
+
+<div class="row">
+
+    <div class="col-md-3">
+        @Html.Action("Categoryes");
+    </div>
+
+    @*using (Html.BeginForm("ShopingCart", "Shoping",FormMethod.Get)) { *@
+    @using (Html.BeginForm("Order", "Shoping"))
+    {
+
+        <div class="col-md-9">
+           
+            @foreach (var item in Model)
+            {
+                <div class="col-lg-4">
+                    <div class="well well-sm container indexCategory">
+                        <div><p class="NameFont"><b> @item.Name</b> </p></div>
+
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <img class="img-rounded" src="@item.Url" height="190px" width="130px" />
+                                <p class="PriceFont"><b>Цена: @item.Price руб</b></p>
+
+                            </div>
+                            <div class="col-lg-6 AllProducts" >
+
+                                <p>Издательство: @item.Brand</p>
+                                <p>Дата Выхода: @item.Date.Year</p>
+                                <p> @Html.ActionLink("Подробнее", "Description", new { id = item.Id })</p>
+                                <p>@Html.ActionLink("В корзину", "ShopingCart", "Shoping", new { id = item.Id }, null)</p>
+                                <input type="hidden" value="@item.Id" name="id" />
+                                <form action="" method="post">
+                                    <div><a href="/Shoping/OrderFast/@item.Id" class="btn btn-success">Купить</a></div>
+                                    @*<p><button type="button" class="btn btn-success">Купить</button></p>*@
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+
+        </div>
+    }
+
+
+    @*   @Html.PagedListPager(Model, page => Url.Action("Index", new { page }))*@
+    @*@Html.PagedListPager((IPagedList)ViewBag.Page,page => Url.Action("Index", new { page }))*@
+    @*@Html.DisplayNameFor(model => model.FirstOrDefault().Guid)*@
+
+
+</div>
+
+

@@ -1,0 +1,240 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AboutUs" xml:space="preserve">
+    <value>О нас</value>
+  </data>
+  <data name="Address" xml:space="preserve">
+    <value>Адрес</value>
+  </data>
+  <data name="AddressF" xml:space="preserve">
+    <value>Улица Неизвестная 25 г.Минск</value>
+  </data>
+  <data name="AddToCart" xml:space="preserve">
+    <value>Добавить в корзину</value>
+  </data>
+  <data name="Arrange" xml:space="preserve">
+    <value>Вы также можете оформить самовывоз.</value>
+  </data>
+  <data name="ArrangeDelivery" xml:space="preserve">
+    <value>Для оформления доставки необхадимо при оформлении заказа выбрать пункт меню Доставка курьером</value>
+  </data>
+  <data name="Buy" xml:space="preserve">
+    <value>Купить</value>
+  </data>
+  <data name="BuyComicsOffline" xml:space="preserve">
+    <value>Вы можете прийти и купить комиксы в нашем офлайн магазине который работает ежедневно с 12:00 до 20:00</value>
+  </data>
+  <data name="Cart" xml:space="preserve">
+    <value>Корзина</value>
+  </data>
+  <data name="ContactInf" xml:space="preserve">
+    <value>Контактная информация</value>
+  </data>
+  <data name="ContInf" xml:space="preserve">
+    <value>Контактная информация</value>
+  </data>
+  <data name="Couriedeliverys" xml:space="preserve">
+    <value>Оформлние курьерской доставки</value>
+  </data>
+  <data name="CourierDelivery" xml:space="preserve">
+    <value>У нас есть курьерская доставка по Минску.</value>
+  </data>
+  <data name="DeliveryandPayment" xml:space="preserve">
+    <value>Доставка и оплата комиксов</value>
+  </data>
+  <data name="DeliveryDescription" xml:space="preserve">
+    <value>Наш магазин хочет предоставить своим клиентам максимальный комфорт. Мы понимаем, что порой не совсем удобно добираться до наших магазина если вы живете далеко или нет свободного времени. Поэтому мы предусмотрели воозможность доставки ваших любимых комиксов прямо к вам домой</value>
+  </data>
+  <data name="DeliveryNextDay" xml:space="preserve">
+    <value>Доставка осуществляется на следующий день после заказа.</value>
+  </data>
+  <data name="DeliveryPrice" xml:space="preserve">
+    <value>Стоимость доставки 7 рублей</value>
+  </data>
+  <data name="DeliveryTime" xml:space="preserve">
+    <value>Доставка осуществляется в течении недели со дня оформления заказа</value>
+  </data>
+  <data name="DeliveryToBelarus" xml:space="preserve">
+    <value>Доставка по Беларуси</value>
+  </data>
+  <data name="DescriptonStore" xml:space="preserve">
+    <value>первый ненастоящий магазин комиксов в Минске. Мы специализируемся на продаже комиксов DC, Marvel, Vertigo, а также  российских комиксов . У нас есть доставка по Минску и по всей Беларуси. Более детальную информацию можно узнать в разделе доставка и оплата. Мы продаем только лицензионные и сертифицированные комиксы. Мы не занимаемся продажей контрафактной продукции, комиксов с фанатским переводом и тд.</value>
+  </data>
+  <data name="Detail" xml:space="preserve">
+    <value>Подробнее</value>
+  </data>
+  <data name="HomePage" xml:space="preserve">
+    <value>Главная</value>
+  </data>
+  <data name="HowBuyComics" xml:space="preserve">
+    <value>Как купить комиксы если я живу в Минске</value>
+  </data>
+  <data name="Mail" xml:space="preserve">
+    <value>Почта</value>
+  </data>
+  <data name="ManagerCall" xml:space="preserve">
+    <value>Менеджер перезвонит вам после оформления заказа и оговорит время доставки</value>
+  </data>
+  <data name="Ourlocation" xml:space="preserve">
+    <value>Где мы находимся</value>
+  </data>
+  <data name="PaymentType" xml:space="preserve">
+    <value>Оплата производится наличными курьеру</value>
+  </data>
+  <data name="PostOfficeDelivery" xml:space="preserve">
+    <value>Вы получите почтовое уведомление, после чего необходимо будет обратиться в ваше почтовое отделение произвести оплату и забрать заказ.</value>
+  </data>
+  <data name="PostOfficeDeliveryType" xml:space="preserve">
+    <value>Для оформления доставки необхадимо при оформлении заказа выбрать пункт меню Доставка почтой</value>
+  </data>
+  <data name="PostOfficeManager" xml:space="preserve">
+    <value>Менеджер перезвонит вам после оформления заказа для уточнения данных</value>
+  </data>
+  <data name="Price" xml:space="preserve">
+    <value>Цена</value>
+  </data>
+  <data name="Publishment" xml:space="preserve">
+    <value>Издатель</value>
+  </data>
+  <data name="Releasedate" xml:space="preserve">
+    <value>Дата</value>
+  </data>
+  <data name="ShipAPay" xml:space="preserve">
+    <value>Доставка и оплата</value>
+  </data>
+  <data name="SorotbyL" xml:space="preserve">
+    <value>Сортировать по убыванию цены</value>
+  </data>
+  <data name="SortbyH" xml:space="preserve">
+    <value>Сортировать по возрастанию цены</value>
+  </data>
+  <data name="StoreName" xml:space="preserve">
+    <value>Comics Store</value>
+  </data>
+  <data name="Telephone" xml:space="preserve">
+    <value>Телефон</value>
+  </data>
+  <data name="WorkTime" xml:space="preserve">
+    <value>ГРАФИК РАБОТЫ</value>
+  </data>
+  <data name="WorkTimeF" xml:space="preserve">
+    <value>Без выходных с 12:00 до 20:00</value>
+  </data>
+</root>

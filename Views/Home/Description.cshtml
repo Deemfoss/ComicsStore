@@ -1,0 +1,14 @@
+﻿@model ComicsStores.Models.Product
+
+<div class="well well-lg">
+    <div> <h3><b>@Model.Name</b></h3></div>
+    <div class="row">
+        <div class="col-md-4"> 
+           <img src="@Model.Url" class="img-thumbnail";alt="Responsive image"   height="200px" width="250px"/>
+            <div><h4>@Resources.Resource.Publishment: @Model.Brand</h4></div>
+            <div><h4>@Resources.Resource.Releasedate: @Model.Date.Year</h4></div>
+            <div><h4><b>@Resources.Resource.Price: @Model.Price</b></h4></div>
+        </div>
+        <div class="col-md-8"><blockquote><h4> @Model.Discription </h4></blockquote></div>
+    </div>
+</div>
